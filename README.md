@@ -1,8 +1,8 @@
 # PI Web API Python Sample
 
-**Version:** 1.0.23
+**Version:** 1.0.33
 
-[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/PI-System/osisoft.sample-pi_web_api-common_actions-python?repoName=osisoft%2Fsample-pi_web_api-common_actions-python&branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2663&repoName=osisoft%2Fsample-pi_web_api-common_actions-python&branchName=main)
+[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/PI-System/aveva.sample-pi_web_api-common_actions-python?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2663&branchName=main)
 
 The sample code in this folder demonstrates how to utilize the PI Web API using Python. You must have already [installed Python](https://www.python.org/downloads/) in order to run this sample application.
 
@@ -19,33 +19,33 @@ To run the sample code:
 
 To run the sample tests:
 
-- The sample test is configured using the file [test_config.placeholder.json](test_config.placeholder.json). Before editing, rename this file to `test_config.json`. This repository's `.gitignore` rules should prevent the file from ever being checked in to any fork or branch, to ensure credentials are not compromised.
-- Open the test config file `test_config.json`
+- The sample test is configured using the file [appsettings.placeholder.json](appsettings.placeholder.json). Before editing, rename this file to `appsettings.json`. This repository's `.gitignore` rules should prevent the file from ever being checked in to any fork or branch, to ensure credentials are not compromised.
+- Open the test config file `appsettings.json`
 - Replace the values with your system configuration.
 
 For example:
 
 ```json
 {
-  "Resource": "REPLACE_WITH_PI_WEB_API_URL",
-  "DataServerName": "REPLACE_WITH_DATA_ARCHIVE_NAME",
-  "AssetServerName": "REPLACE_WITH_ASSET_FRAMEWORK_SERVER_NAME",
-  "Username": "REPLACE_WITH_USERNAME",
-  "Password": "REPLACE_WITH_PASSWORD",
+  "Resource": "PLACEHOLDER_REPLACE_WITH_PI_WEB_API_URL",
+  "DataArchiveName": "PLACEHOLDER_REPLACE_WITH_DATA_ARCHIVE_NAME",
+  "AFServerName": "PLACEHOLDER_REPLACE_WITH_AF_SERVER_NAME",
+  "Username": "PLACEHOLDER_REPLACE_WITH_USERNAME",
+  "Password": "PLACEHOLDER_REPLACE_WITH_PASSWORD",
   "AuthType": "kerberos",
-  "VerifySLL": true
+  "VerifySSL": true
 }
 ```
 
-| Parameters                  | Required | Type           | Description                                                                                                                                                      |
-| --------------------------- | -------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Resource                    | required | string         | The URL of the PI Web API                                                                                                                                        |
-| DataServerName            | required | string         | The name of the PI Data Archive that is being sent to                                                                                                            |
-| AssetServerName           | required | string         | The name of the AF server that is being sent to                                                                                                                  |
-| Username                    | required | string         | The username that is being used for authenticating to the PI Web API                                                                                             |
-| Password                    | required | string         | The password that is being used for authenticating to the PI Web API                                                                                             |
-| AuthType                   | optional | string         | The type of authentication to use when connecting to the PI Web API. By default this is set to "kerberos"                                                        |
-| VerifySSL                 | optional | boolean        | A feature flag for verifying SSL when connecting to the PI Web API. By default this is set to true                                                               |
+| Parameters      | Required | Type    | Description                                                                                               |
+| --------------- | -------- | ------- | --------------------------------------------------------------------------------------------------------- |
+| Resource        | required | string  | The URL of the PI Web API                                                                                 |
+| DataArchiveName | required | string  | The name of the PI Data Archive that is being sent to                                                     |
+| AFServerName    | required | string  | The name of the AF server that is being sent to                                                           |
+| Username        | required | string  | The username that is being used for authenticating to the PI Web API                                      |
+| Password        | required | string  | The password that is being used for authenticating to the PI Web API                                      |
+| AuthType        | optional | string  | The type of authentication to use when connecting to the PI Web API. By default this is set to "kerberos" |
+| VerifySSL       | optional | boolean | A feature flag for verifying SSL when connecting to the PI Web API. By default this is set to true        |
 
 - Each test file (prefixed as "test\_..."), can be run independently or all the tests can be run in a single instance via the `run_all_tests.py` file. **Note: while the tests can be ran individually, some test database, elements, templates, and attributes created within other tests or by the create_sandbox.py script. If these structures are not in place ahead of time, the tests will not function as intended and the API requests will likely return a 404 error**
 - To run a single file, open the test file you wish to run: e.g. `.\test_batch.py`
@@ -104,4 +104,4 @@ The functionality included with this sample includes(recommended order of execut
 
 For the main PI Web API Samples landing page [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System/tree/main/docs/PI-Web-API-Docs)  
 For the main PI System Samples landing page [ReadMe](https://github.com/osisoft/OSI-Samples-PI-System)  
-For the main OSIsoft Samples landing page [ReadMe](https://github.com/osisoft/OSI-Samples)
+For the main AVEVA Samples landing page [ReadMe](https://github.com/osisoft/OSI-Samples)

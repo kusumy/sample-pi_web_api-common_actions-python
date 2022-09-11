@@ -1,5 +1,48 @@
 # Version History
 
+## 1.0.33 / 2022-08-17
+
+- Automate dependabot approval and automerge
+
+## 1.0.32 / 2022-08-09
+
+- Add dependabot.yml to automate dependency checks
+- Remove weekly tests
+- Parameterize pool and demands
+
+## 1.0.31 / 2022-06-20
+
+- Updated dependencies
+
+## 1.0.30 / 2021-11-05
+
+- Changed agent used in pipeline
+
+## 1.0.29 / 2022-01-17
+
+- Updated dependencies
+
+## 1.0.28 / 2021-12-07
+
+- Update pipelines to reference internal analysis templates
+
+## 1.0.27 / 2021-10-13
+
+- Update pipelines to use Azure Key Vault for secrets
+- Changed configuration file name and some parameter names
+
+## 1.0.26 / 2021-09-07
+
+- Edited gitignore
+
+## 1.0.25 / 2021-08-10
+
+- Edited gitignore
+
+## 1.0.24 / 2021-07-15
+
+- Updated dependencies
+
 ## 1.0.23 / 2021-06-29
 
 - Add option of certificate validation to batch calls
